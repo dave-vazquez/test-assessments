@@ -1,10 +1,14 @@
 import React from "react";
+import Navigation from "./components/Navigation";
+import ReportModal from "./components/ReportModal";
+import AppContainer from "./styles/AppContainer";
 
 function App() {
   return (
-    <div>
-      <span>React Application</span>
-    </div>
+    <AppContainer>
+      <Navigation />
+      <ReportModal />
+    </AppContainer>
   );
 }
 
