@@ -1,14 +1,15 @@
+import "./styles/app.scss";
+
 import React from "react";
+import Assessment from "./components/Assessment/Assessment";
 import Navigation from "./components/Navigation";
-import ReportModal from "./components/ReportModal";
-import AppContainer from "./styles/AppContainer";
 
 function App() {
   return (
-    <AppContainer>
+    <div className="app">
       <Navigation />
-      <ReportModal />
-    </AppContainer>
+      <Assessment />
+    </div>
   );
 }
 
