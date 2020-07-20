@@ -1,8 +1,8 @@
-import "./styles/navigation.scss";
+import "./navigation.scss";
 
 import React from "react";
-import { ReactComponent as HomeSVG } from "../assets/home.svg";
-import { ReactComponent as LogoSVG } from "../assets/nearpod-logo.svg";
+import { ReactComponent as HomeSVG } from "../../assets/home.svg";
+import { ReactComponent as LogoSVG } from "../../assets/nearpod-logo.svg";
 
 const Navigation = () => {
   return (

@@ -1,4 +1,4 @@
-import "./styles/respondent-table.scss";
+import "./styles/student-table.scss";
 
 import _ from "lodash";
 import React, { useMemo } from "react";

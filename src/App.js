@@ -1,8 +1,8 @@
-import "./styles/app.scss";
+import "./app.scss";
 
 import React from "react";
 import Assessment from "./components/Assessment/Assessment";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/Navigation/Navigation";
 
 function App() {
   return (

@@ -4,7 +4,7 @@ import _ from "lodash";
 import React from "react";
 import { Link, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import Analysis from "./Analysis";
+import Analysis from "./Analysis/Analysis";
 
 const AssessmentResults = (props) => {
   const { questions, students } = props.assessment;
@@ -30,7 +30,8 @@ const AssessmentResults = (props) => {
             return (
               <Route
                 key={question.id}
-                path={`/${question.id}`}
+                // path={`/${question.id}`}
+                path="/"
                 render={(props) => (
                   <Analysis
                     {...props}
