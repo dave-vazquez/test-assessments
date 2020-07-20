@@ -1,0 +1,81 @@
+section.analysis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 88%;
+  height: 34.1rem;
+
+  padding-left: 5rem;
+
+  header {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    margin: auto;
+
+    margin-bottom: 1rem;
+
+    h2 {
+      margin: 0;
+      border: 0;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0;
+      color: #2d639a;
+    }
+
+    ol {
+      list-style-type: demical;
+
+      li {
+        font-size: 1.5rem;
+        width: fit-content;
+      }
+    }
+  }
+
+  .student-breakdown {
+    display: flex;
+
+    table {
+      width: 50%;
+
+      border-collapse: collapse;
+
+      text-align: left;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      th {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2d639a;
+      }
+
+      thead {
+        tr {
+          border-bottom: 1px solid black;
+        }
+      }
+
+      tbody {
+        tr:nth-child(odd) {
+          background: #d6dce5;
+        }
+
+        td {
+          padding: 0.5rem 0.6rem;
+
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
