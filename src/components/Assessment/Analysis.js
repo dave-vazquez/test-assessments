@@ -2,6 +2,7 @@ import "./styles/analysis.scss";
 
 import _ from "lodash";
 import React from "react";
+import StudentTable from "./StudentTable";
 import Doughnut from "./graphs/Doughnut";
 
 const Analysis = (props) => {
@@ -34,11 +35,7 @@ const Analysis = (props) => {
             return (
               <li
                 key={choice.id}
-                style={{
-                  backgroundColor: choice.isAnswer
-                    ? "#4CD00077"
-                    : "transparent",
-                }}
+                className={`${choice.isAnswer ? "correct" : ""}`}
               >
                 {choice.text}
               </li>
@@ -47,31 +44,11 @@ const Analysis = (props) => {
         </ol>
       </header>
       <div className="student-breakdown">
-        <table>
-          <thead>
-            <tr>
-              <th>Student</th>
-              <th>Choice</th>
-            </tr>
-          </thead>
-          <tbody>
-            {_.map(respondents, ({ studentId, choiceId }) => {
-              const student = students[studentId];
-              const choice = choices[choiceId];
-              return (
-                <tr
-                  key={studentId}
-                  style={{
-                    color: !choice.isAnswer ? "#ff0000" : "#000",
-                  }}
-                >
-                  <td>{student.name}</td>
-                  <td>{choice.num}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <StudentTable
+          respondents={respondents}
+          choices={choices}
+          students={students}
+        />
         <Doughnut totals={totals} />
       </div>
     </section>

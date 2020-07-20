@@ -41,41 +41,13 @@ section.analysis {
 
   .student-breakdown {
     display: flex;
-
-    table {
-      width: 50%;
-
-      border-collapse: collapse;
-
-      text-align: left;
-
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-      th {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #2d639a;
-      }
-
-      thead {
-        tr {
-          border-bottom: 1px solid black;
-        }
-      }
-
-      tbody {
-        tr:nth-child(odd) {
-          background: #d6dce5;
-        }
-
-        td {
-          padding: 0.5rem 0.6rem;
-
-          font-size: 1.4rem;
-        }
-      }
-    }
   }
+}
+
+.correct {
+  background: #4cd00077;
+}
+
+.incorrect {
+  color: #ff0000;
 }
