@@ -11,20 +11,6 @@ const Analysis = (props) => {
     students,
   } = props;
 
-  const parseQuestionText = (text) => {
-    return text.map((line, i) => (
-      <span key={i}>
-        {line}
-        {i !== text.length - 1 && (
-          <>
-            <br />
-            <br />
-          </>
-        )}
-      </span>
-    ));
-  };
-
   return (
     // TODO: just make the question prompt a <p> and limit the width..
     // it'll remove any need for mapping...
