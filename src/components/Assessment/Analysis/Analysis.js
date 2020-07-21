@@ -7,7 +7,7 @@ import Doughnut from "./graphs/Doughnut";
 
 const Analysis = (props) => {
   const {
-    question: { id, type, text, choices, respondents, totals },
+    question: { id, text, choices, respondents, totals },
     students,
   } = props;
 
@@ -31,12 +31,9 @@ const Analysis = (props) => {
         <h2>Question {id + 1}</h2>
         <p>{parseQuestionText(text)}</p>
         <ol>
-          {_.map(choices, (choice) => {
+          {_.map(choices, (choice, i) => {
             return (
-              <li
-                key={choice.id}
-                className={`${choice.isAnswer ? "correct" : ""}`}
-              >
+              <li key={i} className={`${choice.isAnswer ? "correct" : ""}`}>
                 {choice.text}
               </li>
             );
