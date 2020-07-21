@@ -1,7 +1,7 @@
 import "./styles/doughnut.scss";
 
 import React from "react";
-import { Doughnut as CJS_Doughnut } from "react-chartjs-2";
+import { Doughnut as CJSDoughnut } from "react-chartjs-2";
 
 const Doughnut = (props) => {
   const totals = props.totals;
@@ -22,7 +22,7 @@ const Doughnut = (props) => {
 
   return (
     <div className="doughnut">
-      <CJS_Doughnut data={data} />
+      <CJSDoughnut data={data} />
     </div>
   );
 };
