@@ -30,8 +30,7 @@ const AssessmentResults = (props) => {
             return (
               <Route
                 key={question.id}
-                // path={`/${question.id}`}
-                path="/"
+                path={`/${question.id}`}
                 render={(props) => (
                   <Analysis
                     {...props}
