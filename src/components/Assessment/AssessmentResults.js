@@ -5,9 +5,10 @@ import React from "react";
 import { Link, Route } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import Analysis from "./Analysis/Analysis";
+import Summary from "./Summary/Summary";
 
 const AssessmentResults = (props) => {
-  const { questions, students } = props.assessment;
+  const { questions, students, scores } = props.assessment;
 
   return (
     <Router>
@@ -17,7 +18,6 @@ const AssessmentResults = (props) => {
         </header>
         <div>
           <nav>
-            <Link to="/summary">Summary</Link>
             {_.map(questions, (question) => {
               return (
                 <Link key={question.id} to={`/${question.id}`}>
@@ -25,6 +25,7 @@ const AssessmentResults = (props) => {
                 </Link>
               );
             })}
+            <Link to="/summary">Summary</Link>
           </nav>
           {_.map(questions, (question) => {
             return (
@@ -41,6 +42,12 @@ const AssessmentResults = (props) => {
               />
             );
           })}
+          <Route
+            path="/summary"
+            render={(props) => (
+              <Summary {...props} students={students} scores={scores} />
+            )}
+          />
         </div>
       </section>
     </Router>
