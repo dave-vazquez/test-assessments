@@ -19,14 +19,14 @@ const StudentTable = (props) => {
         col2: choice.num,
         col3: (
           <FontAwesomeIcon
-            correct={choice.isAnswer.toString()}
+            value={choice.isAnswer}
             icon={choice.isAnswer ? faCheck : faTimes}
             color={choice.isAnswer ? "green" : "red"}
           />
         ),
       };
     });
-  }, []);
+  }, [respondents, choices, students]);
 
   const columns = useMemo(() => {
     return [
@@ -41,6 +41,15 @@ const StudentTable = (props) => {
       {
         Header: "Correct",
         accessor: "col3",
+        sortType: (rowA, rowB) => {
+          const val1 = rowA.values.col3.props.value;
+          const val2 = rowB.values.col3.props.value;
+
+          if (val1 < val2) return -1;
+          if (val1 > val2) return 1;
+
+          return 0;
+        },
       },
     ];
   }, []);
@@ -48,6 +57,15 @@ const StudentTable = (props) => {
   const {
     getTableProps,
     getTableBodyProps,
+    getRowProps = (row) => {
+      const isCorrect = row.values.col3.props.value;
+
+      return {
+        style: {
+          background: isCorrect ? "#4CD00077" : "#ff000077",
+        },
+      };
+    },
     headerGroups,
     rows,
     prepareRow,
@@ -56,10 +74,11 @@ const StudentTable = (props) => {
   return (
     <table {...getTableProps()}>
       <thead>
-        {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
-            {headerGroup.headers.map((column) => (
+        {headerGroups.map((headerGroup, i) => (
+          <tr key={i} {...headerGroup.getHeaderGroupProps()}>
+            {headerGroup.headers.map((column, i) => (
               <th
+                key={i}
                 {...column.getHeaderProps(() => column.getSortByToggleProps())}
               >
                 {column.render("Header")}
@@ -72,9 +91,13 @@ const StudentTable = (props) => {
         {rows.map((row, i) => {
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => {
-                return <td {...cell.getCellProps()}>{cell.render("Cell")}</td>;
+            <tr key={i} {...row.getRowProps(getRowProps(row))}>
+              {row.cells.map((cell, i) => {
+                return (
+                  <td key={i} {...cell.getCellProps()}>
+                    {cell.render("Cell")}
+                  </td>
+                );
               })}
             </tr>
           );
