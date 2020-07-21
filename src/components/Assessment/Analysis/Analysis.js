@@ -7,7 +7,7 @@ import Doughnut from "./graphs/Doughnut";
 
 const Analysis = (props) => {
   const {
-    question: { id, text, choices, respondents, totals },
+    question: { id, prompt, question, choices, respondents, totals },
     students,
   } = props;
 
@@ -26,10 +26,24 @@ const Analysis = (props) => {
   };
 
   return (
+    // TODO: just make the question prompt a <p> and limit the width..
+    // it'll remove any need for mapping...
     <section className="analysis">
       <header>
         <h2>Question {id + 1}</h2>
-        <p>{parseQuestionText(text)}</p>
+        <p>
+          {prompt.map((line, i) => (
+            <span key={i}>
+              {line}
+              <br />
+            </span>
+          ))}
+        </p>
+        <p>
+          <br />
+          {question}
+        </p>
+        <br />
         <ol>
           {_.map(choices, (choice, i) => {
             return (
