@@ -445,43 +445,53 @@
   "students": {
     "0": {
       "id": 0,
-      "name": "Raihan Ortiz"
+      "name": "Raihan Ortiz",
+      "score": 23
     },
     "1": {
       "id": 1,
-      "name": "Macy Munro"
+      "name": "Macy Munro",
+      "score": 40
     },
     "2": {
       "id": 2,
-      "name": "Marek Laing"
+      "name": "Marek Laing",
+      "score": 45
     },
     "3": {
       "id": 3,
-      "name": "Callen Pena"
+      "name": "Callen Pena",
+      "score": 51
     },
     "4": {
       "id": 4,
-      "name": "Maheen Stout"
+      "name": "Maheen Stout",
+      "score": 65
     },
     "5": {
       "id": 5,
-      "name": "Herbie Rivas"
+      "name": "Herbie Rivas",
+      "score": 70
     },
     "6": {
       "id": 6,
-      "name": "Fearne Walker"
+      "name": "Fearne Walker",
+      "score": 85
     },
     "7": {
       "id": 7,
-      "name": "Ayisha Guzman"
+      "name": "Ayisha Guzman",
+      "score": 93
     },
     "8": {
       "id": 8,
-      "name": "Kodi Oneal"
+      "name": "Kodi Oneal",
+      "score": 100
     },
     "9": {
       "id": 9,
-      "name": "Amman Kavanagh"
+      "name": "Amman Kavanagh",
+      "score": 100
     }
   }
 }
