@@ -2,7 +2,7 @@
   "name": "test-assessments",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dave-vazquez.github.io/test-assessments/",
+  "homepage": "https://dave-vazquez.github.io/test-assessments",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",

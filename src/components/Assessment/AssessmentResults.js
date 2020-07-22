@@ -11,27 +11,34 @@ const AssessmentResults = (props) => {
   const { questions, students, scores } = props.assessment;
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <section className="assessment-results">
         <header>
           <h2>Results</h2>
         </header>
         <div>
           <nav>
+            <Link to="/">Summary</Link>
             {_.map(questions, (question) => {
               return (
-                <Link key={question.id} to={`/test-assessments/${question.id}`}>
+                <Link key={question.id} to={`/${question.id}`}>
                   Question {question.id + 1}
                 </Link>
               );
             })}
-            <Link to="/test-assessments/summary">Summary</Link>
           </nav>
+          <Route
+            exact
+            path="/"
+            render={(props) => (
+              <Summary {...props} students={students} scores={scores} />
+            )}
+          />
           {_.map(questions, (question) => {
             return (
               <Route
                 key={question.id}
-                path={`/test-assessments/${question.id}`}
+                path={`/${question.id}`}
                 render={(props) => (
                   <Analysis
                     {...props}
@@ -42,12 +49,6 @@ const AssessmentResults = (props) => {
               />
             );
           })}
-          <Route
-            path="/test-assessments/summary"
-            render={(props) => (
-              <Summary {...props} students={students} scores={scores} />
-            )}
-          />
         </div>
       </section>
     </Router>
