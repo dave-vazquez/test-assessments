@@ -1,7 +1,7 @@
 import "./styles/doughnut.scss";
 
-import React from "./node_modules/react";
-import { Doughnut as CJSDoughnut } from "./node_modules/react-chartjs-2";
+import React from "react";
+import { Doughnut as CJSDoughnut } from "react-chartjs-2";
 
 const Doughnut = (props) => {
   const totals = props.totals;
