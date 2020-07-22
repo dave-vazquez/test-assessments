@@ -20,18 +20,18 @@ const AssessmentResults = (props) => {
           <nav>
             {_.map(questions, (question) => {
               return (
-                <Link key={question.id} to={`/${question.id}`}>
+                <Link key={question.id} to={`/test-assessments/${question.id}`}>
                   Question {question.id + 1}
                 </Link>
               );
             })}
-            <Link to="/summary">Summary</Link>
+            <Link to="/test-assessments/summary">Summary</Link>
           </nav>
           {_.map(questions, (question) => {
             return (
               <Route
                 key={question.id}
-                path={`/${question.id}`}
+                path={`/test-assessments/${question.id}`}
                 render={(props) => (
                   <Analysis
                     {...props}
@@ -43,7 +43,7 @@ const AssessmentResults = (props) => {
             );
           })}
           <Route
-            path="/summary"
+            path="/test-assessments/summary"
             render={(props) => (
               <Summary {...props} students={students} scores={scores} />
             )}
