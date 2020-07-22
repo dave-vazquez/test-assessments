@@ -2,7 +2,7 @@ import "./styles/analysis.scss";
 
 import _ from "lodash";
 import React from "react";
-import Doughnut from "../graphs/Doughnut";
+import Doughnut from "../Graphs/Doughnut";
 import StudentTable from "./StudentTable";
 
 const Analysis = (props) => {

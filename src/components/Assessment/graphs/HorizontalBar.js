@@ -1,8 +1,8 @@
 import "./styles/horizontal-bar.scss";
 
-import _ from "lodash";
-import React from "react";
-import { HorizontalBar as CJSHorizontalBar } from "react-chartjs-2";
+import _ from "./node_modules/lodash";
+import React from "./node_modules/react";
+import { HorizontalBar as CJSHorizontalBar } from "./node_modules/react-chartjs-2";
 
 const HorizontalBar = (props) => {
   const { students } = props;

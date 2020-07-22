@@ -1,7 +1,7 @@
 import "./styles/summary.scss";
 
 import React from "react";
-import HorizontalBar from "../graphs/HorizontalBar";
+import HorizontalBar from "../Graphs/HorizontalBar";
 
 const Summary = (props) => {
   const { students } = props;
