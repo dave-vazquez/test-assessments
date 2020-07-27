@@ -5,7 +5,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import colors from "../../../variables.scss";
 
-const LessonScheduler = () => {
+const Scheduler = () => {
   const handleSubmit = () => {
     alert("Opens selected calendar application to complete schedule process.");
   };
@@ -112,4 +112,4 @@ const LessonScheduler = () => {
   );
 };
 
-export default LessonScheduler;
+export default Scheduler;

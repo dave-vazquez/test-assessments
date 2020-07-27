@@ -4,7 +4,7 @@ import _ from "lodash";
 import React, { useLayoutEffect, useMemo, useState } from "react";
 import { Route } from "react-router-dom";
 import HorizontalBar from "../Graphs/HorizontalBar";
-import LessonScheduler from "../LessonScheduler/LessonScheduler";
+import Scheduler from "../Scheduler/Scheduler";
 import GroupTable from "./GroupTable";
 
 const Summary = (props) => {
@@ -55,7 +55,7 @@ const Summary = (props) => {
               viewScheduler={viewScheduler}
             />
           ))}
-          {viewScheduler && <LessonScheduler />}
+          {viewScheduler && <Scheduler />}
         </div>
       </div>
     </section>
