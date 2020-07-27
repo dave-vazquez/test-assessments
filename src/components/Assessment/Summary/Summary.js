@@ -2,7 +2,6 @@ import "./styles/summary.scss";
 
 import _ from "lodash";
 import React, { useLayoutEffect, useMemo, useState } from "react";
-import { Route } from "react-router-dom";
 import HorizontalBar from "../Graphs/HorizontalBar";
 import Scheduler from "../Scheduler/Scheduler";
 import GroupTable from "./GroupTable";
@@ -25,16 +24,11 @@ const Summary = (props) => {
   useLayoutEffect(() => {
     if (selectedBracket === "All") setGroups(groupedStudents);
     else setGroups({ [selectedBracket]: groupedStudents[selectedBracket] });
-  }, [selectedBracket]);
+  }, [selectedBracket, groupedStudents]);
 
   const scheduleNewLesson = (bracket) => {
     setSelectedBracket(bracket);
     setViewScheduler(true);
-  };
-
-  const closeScheduler = () => {
-    setSelectedBracket("All");
-    setViewScheduler(false);
   };
 
   return (

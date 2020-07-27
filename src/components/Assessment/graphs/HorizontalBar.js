@@ -1,7 +1,7 @@
 import "./styles/horizontal-bar.scss";
 
 import _ from "lodash";
-import React, { useMemo } from "react";
+import React from "react";
 import { HorizontalBar as CJSHorizontalBar } from "react-chartjs-2";
 
 const HorizontalBar = (props) => {
