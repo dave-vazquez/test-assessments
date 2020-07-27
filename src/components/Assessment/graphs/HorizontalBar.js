@@ -1,11 +1,13 @@
 import "./styles/horizontal-bar.scss";
 
 import _ from "lodash";
-import React from "react";
+import React, { useMemo } from "react";
 import { HorizontalBar as CJSHorizontalBar } from "react-chartjs-2";
 
 const HorizontalBar = (props) => {
-  const { students } = props;
+  // const students = _.toArray(props.students).flat();
+
+  const students = props.students;
 
   const mapGradient = (prct) => {
     const red = Math.round(15 * (100 - prct));
@@ -54,6 +56,8 @@ const HorizontalBar = (props) => {
       ],
     },
   };
+
+  if (students.length === 0) return null;
 
   return (
     <div className="horizontal-bar">

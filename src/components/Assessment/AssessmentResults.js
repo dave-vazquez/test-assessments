@@ -7,12 +7,12 @@ import Analysis from "./Analysis/Analysis";
 import Summary from "./Summary/Summary";
 
 const AssessmentResults = (props) => {
-  const { questions, students, scores } = props.assessment;
+  const { questions, students } = props.assessment;
 
   return (
     <section className="assessment-results">
       <header>
-        <h2>Results</h2>
+        <h2 className="results">Results</h2>
       </header>
       <div>
         <nav>
@@ -28,9 +28,7 @@ const AssessmentResults = (props) => {
         <Route
           exact
           path="/"
-          render={(props) => (
-            <Summary {...props} students={students} scores={scores} />
-          )}
+          render={(props) => <Summary {...props} students={students} />}
         />
         {_.map(questions, (question) => {
           return (

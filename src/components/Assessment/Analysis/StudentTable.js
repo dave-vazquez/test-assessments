@@ -5,6 +5,7 @@ import React, { useMemo } from "react";
 import { useSortBy, useTable } from "react-table";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import colors from "../../../variables.scss";
 
 const StudentTable = (props) => {
   const { respondents, choices, students } = props;
@@ -62,7 +63,7 @@ const StudentTable = (props) => {
 
       return {
         style: {
-          background: isCorrect ? "#4CD00077" : "#ff000077",
+          background: isCorrect ? colors.correctFaded : colors.incorrectFaded,
         },
       };
     },
@@ -72,7 +73,7 @@ const StudentTable = (props) => {
   } = useTable({ columns, data }, useSortBy);
 
   return (
-    <table {...getTableProps()}>
+    <table {...getTableProps()} className="student-table">
       <thead>
         {headerGroups.map((headerGroup, i) => (
           <tr key={i} {...headerGroup.getHeaderGroupProps()}>

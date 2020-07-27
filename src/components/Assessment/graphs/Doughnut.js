@@ -2,6 +2,7 @@ import "./styles/doughnut.scss";
 
 import React from "react";
 import { Doughnut as CJSDoughnut } from "react-chartjs-2";
+import colors from "../../../variables.scss";
 
 const Doughnut = (props) => {
   const totals = props.totals;
@@ -11,7 +12,7 @@ const Doughnut = (props) => {
     datasets: [
       {
         data: [totals.correct, totals.incorrect],
-        backgroundColor: ["#4CD000", "#ff0000"],
+        backgroundColor: [colors.correct, colors.incorrect],
         options: {
           tooltipTemplate:
             "<%if (label){%><%=label %>: <%}%><%= value + ' %' %>",
@@ -23,6 +24,10 @@ const Doughnut = (props) => {
   return (
     <div className="doughnut">
       <CJSDoughnut data={data} />
+      <div>
+        <span className="correct">{totals.correct}% Correct</span>
+        <span className="incorrect">{totals.incorrect}% Incorrect</span>
+      </div>
     </div>
   );
 };

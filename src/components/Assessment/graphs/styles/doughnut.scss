@@ -1,4 +1,32 @@
+@import "../../../../variables.scss";
+
 .doughnut {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 50%;
   overflow: hidden;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 30%;
+    // border: 1px solid black;
+
+    .correct {
+      padding: 0.3rem;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    .incorrect {
+      padding: 0.3rem;
+      color: $black;
+      text-align: center;
+      font-size: 1.6rem;
+      background-color: rgba(255, 0, 0, 0.467);
+    }
+  }
 }

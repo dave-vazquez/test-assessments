@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 div.overlay {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@ div.overlay {
   width: 100%;
   height: 100vh;
 
-  background-color: #152d39;
+  background-color: $dark-teal;
   opacity: 0.9;
 }
 
@@ -17,7 +19,7 @@ section.assessment-modal {
   width: 96rem;
   height: 80rem;
 
-  background: #f3eeee;
+  background: $white-faded;
   opacity: 1;
 
   padding: 0 2.6rem;
@@ -26,11 +28,11 @@ section.assessment-modal {
 
   header {
     h1 {
-      color: #00a8ff;
+      color: $light-blue;
       font-weight: 400;
       font-size: 2.5rem;
       padding-bottom: 1.1rem;
-      border-bottom: 2px solid #00a8ff;
+      border-bottom: 2px solid $light-blue;
       margin-bottom: 1.8rem;
     }
 
@@ -58,31 +60,4 @@ section.assessment-modal {
       }
     }
   }
-
-  // section.details {
-  //   display: flex;
-
-  //   img {
-  //     width: 8rem;
-  //     height: 6rem;
-  //   }
-
-  //   div {
-  //     display: flex;
-  //     flex-direction: column;
-
-  //     padding: 0.3rem 0;
-  //     margin-left: 1rem;
-
-  //     p.title {
-  //       margin-bottom: 0.3rem;
-  //       font-size: 2.4rem;
-  //     }
-
-  //     p {
-  //       margin: 0;
-  //       font-size: 1.3rem;
-  //     }
-  //   }
-  // }
 }

@@ -1,3 +1,5 @@
+@import "../../../../variables.scss";
+
 section.class-summary {
   width: 88%;
   padding-left: 5rem;
@@ -6,6 +8,26 @@ section.class-summary {
     h2 {
       margin: 0;
       border: 0;
+    }
+  }
+
+  hr {
+    height: 3px;
+    width: 100%;
+    background: $dark-gray;
+  }
+
+  .class-performance {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .student-groups {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      padding: 1rem;
     }
   }
 }

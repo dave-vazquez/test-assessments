@@ -1,0 +1,23 @@
+section {
+  width: 30%;
+
+  header.bracket {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      margin: 0;
+      border: 0;
+    }
+
+    button {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      margin-top: -5px;
+    }
+  }
+  table.group-table {
+    width: 100%;
+  }
+}
