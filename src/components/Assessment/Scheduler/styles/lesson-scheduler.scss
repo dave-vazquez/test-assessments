@@ -1,5 +1,5 @@
 @import "../../../../variables.scss";
-
+@import "../../../../mixins.scss";
 .lesson-scheduler {
   width: 66%;
   height: fit-content;
@@ -25,9 +25,8 @@
       width: 100%;
 
       h2.date-time {
-        margin: 0;
+        @include secondary-heading;
         margin-top: 0.5rem;
-        border: 0;
       }
 
       // border: 1px solid black;
@@ -95,8 +94,7 @@
       width: 100%;
 
       h2.suggested-lessons {
-        margin: 0;
-        border: 0;
+        @include secondary-heading;
       }
 
       div.lessons {

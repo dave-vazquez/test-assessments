@@ -1,13 +1,12 @@
 @import "../../../../variables.scss";
-
+@import "../../../../mixins.scss";
 section.class-summary {
   width: 88%;
   padding-left: 5rem;
 
   header {
     h2 {
-      margin: 0;
-      border: 0;
+      @include secondary-heading;
     }
   }
 

@@ -1,4 +1,5 @@
 @import "../../../../variables.scss";
+@import "../../../../mixins.scss";
 
 section.analysis {
   display: flex;
@@ -20,8 +21,7 @@ section.analysis {
     margin-bottom: 1rem;
 
     h2 {
-      margin: 0;
-      border: 0;
+      @include secondary-heading;
     }
 
     p {
