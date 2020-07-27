@@ -1,5 +1,6 @@
 @import "../../../../variables.scss";
 @import "../../../../mixins.scss";
+
 section.class-summary {
   width: 88%;
   padding-left: 5rem;
@@ -8,12 +9,6 @@ section.class-summary {
     h2 {
       @include secondary-heading;
     }
-  }
-
-  hr {
-    height: 3px;
-    width: 100%;
-    background: $dark-gray;
   }
 
   .class-performance {
@@ -27,6 +22,8 @@ section.class-summary {
       width: 100%;
 
       padding: 1rem;
+
+      border-top: 3px solid $dark-gray;
     }
   }
 }

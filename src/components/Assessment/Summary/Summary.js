@@ -44,7 +44,6 @@ const Summary = (props) => {
       </header>
       <div className="class-performance">
         {!viewScheduler && <HorizontalBar students={students} />}
-        <hr />
         <div className="student-groups">
           {_.map(groups, (group, bracket) => (
             <GroupTable
