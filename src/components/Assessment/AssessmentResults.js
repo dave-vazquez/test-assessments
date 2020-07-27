@@ -3,7 +3,7 @@ import "./styles/assessment-results.scss";
 import _ from "lodash";
 import React from "react";
 import { Link, Route } from "react-router-dom";
-import Question from "./Analysis/Analysis";
+import Question from "./Question/Question";
 import Summary from "./Summary/Summary";
 
 const AssessmentResults = (props) => {

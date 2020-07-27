@@ -12,19 +12,10 @@ const Question = (props) => {
   } = props;
 
   return (
-    // TODO: just make the question prompt a <p> and limit the width..
-    // it'll remove any need for mapping...
     <section className="analysis">
       <header>
         <h2>Question {id + 1}</h2>
-        <p>
-          {prompt.map((line, i) => (
-            <span key={i}>
-              {line}
-              <br />
-            </span>
-          ))}
-        </p>
+        <p>{prompt}</p>
         <p>
           <br />
           {question}

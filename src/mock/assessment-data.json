@@ -7,9 +7,7 @@
     "0": {
       "id": 0,
       "type": "multiple-choice",
-      "prompt": [
-        "\"Like a sleeper walking from a dream, he looked around, dazed\""
-      ],
+      "prompt": "\"Like a sleeper walking from a dream, he looked around, dazed\"",
       "question": "This tells us that at the end of the story Michael felt that...",
       "choices": {
         "0": {
@@ -83,10 +81,7 @@
     "1": {
       "id": 1,
       "type": "multiple-choice",
-      "prompt": [
-        "Thunder struck and rain poured. Max stared out the window.",
-        "He dropped the kite from his hand and started to cry."
-      ],
+      "prompt": "Thunder struck and rain poured. Max stared out the window. He dropped the kite from his hand and started to cry.",
       "question": "Why is Max upset?",
       "choices": {
         "0": {
@@ -155,10 +150,7 @@
     "2": {
       "id": 2,
       "type": "multiple-choice",
-      "prompt": [
-        "Mom got home from the grocery store, and saw the kitchen window was smashed.",
-        "There was a baseball lying on the kitchen floor. She called out “Tommy!,” but her son did not answer."
-      ],
+      "prompt": "Mom got home from the grocery store, and saw the kitchen window was smashed. There was a baseball lying on the kitchen floor. She called out “Tommy!,” but her son did not answer.",
       "question": "How did the window get broken?",
       "choices": {
         "0": {
@@ -227,11 +219,7 @@
     "3": {
       "id": 3,
       "type": "multiple-choice",
-      "prompt": [
-        "Cassie opened her eyes and looked at her clock. It said “9:48.” “Holy cow!” she",
-        "yelled, as she jumped out of bed, threw on the first outfit she could find, and",
-        "ran out the door"
-      ],
+      "prompt": "Cassie opened her eyes and looked at her clock. It said “9:48.” “Holy cow!” she yelled, as she jumped out of bed, threw on the first outfit she could find, and ran out the door.",
       "question": "What problem is Cassie having?",
       "choices": {
         "0": {
@@ -300,10 +288,7 @@
     "4": {
       "id": 4,
       "type": "multiple-choice",
-      "prompt": [
-        "Today, I got to push the cart. One of the front wheels was wobbly, so it was hard to",
-        "keep it straight. As mom put things in, it got harder and harder to push."
-      ],
+      "prompt": "Today, I got to push the cart. One of the front wheels was wobbly, so it was hard to keep it straight. As mom put things in, it got harder and harder to push.",
       "question": "Where am I?",
       "choices": {
         "0": {
@@ -372,10 +357,7 @@
     "5": {
       "id": 5,
       "type": "multiple-choice",
-      "prompt": [
-        "The crowd clapped as I practiced swinging the bat. I pulled my helmet on and",
-        "stepped up for my turn."
-      ],
+      "prompt": "The crowd clapped as I practiced swinging the bat. I pulled my helmet on and stepped up for my turn.",
       "question": "Where am I?",
       "choices": {
         "0": {
