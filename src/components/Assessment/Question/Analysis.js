@@ -5,7 +5,7 @@ import React from "react";
 import Doughnut from "../Graphs/Doughnut";
 import StudentTable from "./StudentTable";
 
-const Analysis = (props) => {
+const Question = (props) => {
   const {
     question: { id, prompt, question, choices, respondents, totals },
     students,
@@ -52,4 +52,4 @@ const Analysis = (props) => {
   );
 };
 
-export default Analysis;
+export default Question;

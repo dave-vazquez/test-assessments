@@ -3,7 +3,7 @@ import "./styles/assessment-results.scss";
 import _ from "lodash";
 import React from "react";
 import { Link, Route } from "react-router-dom";
-import Analysis from "./Analysis/Analysis";
+import Question from "./Analysis/Analysis";
 import Summary from "./Summary/Summary";
 
 const AssessmentResults = (props) => {
@@ -36,7 +36,7 @@ const AssessmentResults = (props) => {
               key={question.id}
               path={`/${question.id}`}
               render={(props) => (
-                <Analysis {...props} question={question} students={students} />
+                <Question {...props} question={question} students={students} />
               )}
             />
           );
