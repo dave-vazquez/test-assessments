@@ -1,7 +1,7 @@
 @import "../../../../variables.scss";
 @import "../../../../mixins.scss";
 
-section.class-summary {
+section.summary {
   width: 88%;
   padding-left: 5rem;
 
@@ -11,7 +11,7 @@ section.class-summary {
     }
   }
 
-  .class-performance {
+  .performance-overview {
     display: flex;
     flex-direction: column;
     width: 100%;

@@ -38,11 +38,11 @@ const Summary = (props) => {
   };
 
   return (
-    <section className="class-summary">
+    <section className="summary">
       <header>
         <h2>{viewScheduler ? "Schedule New Lesson" : "Summary"}</h2>
       </header>
-      <div className="class-performance">
+      <div className="performance-overview">
         {!viewScheduler && <HorizontalBar students={students} />}
         <div className="student-groups">
           {_.map(groups, (group, bracket) => (
