@@ -15,98 +15,95 @@ const Scheduler = () => {
   };
 
   return (
-    <section className="lesson-scheduler">
+    <section className="scheduler">
       <form onSubmit={handleSubmit}>
         <div className="suggested-lessons">
-          <h2 className="suggested-lessons">Suggested Lessons</h2>
-          <div className="lessons">
-            <div>
-              <input type="radio" id="cal1" />
-              <label for="cal1">Making Inferences: Informational Texts I</label>
-              <FontAwesomeIcon
-                style={{ cursor: "pointer" }}
-                icon={faExternalLinkAlt}
-                size="lg"
-                color={colors.lightBlue}
-                onClick={handleClick}
-              />
-            </div>
-            <div>
-              <input type="radio" id="cal1" />
-              <label for="cal1">
-                Making Inferences: Informational Texts II
-              </label>
-              <FontAwesomeIcon
-                style={{ cursor: "pointer" }}
-                icon={faExternalLinkAlt}
-                size="lg"
-                color={colors.lightBlue}
-                onClick={handleClick}
-              />
-            </div>
-            <div>
-              <input type="radio" id="cal1" />
-              <label for="cal1">
-                Making Inferences: Informational Texts III
-              </label>
-              <FontAwesomeIcon
-                icon={faExternalLinkAlt}
-                size="lg"
-                color={colors.lightBlue}
-                onClick={handleClick}
-              />
-            </div>
-            <div>
-              <input type="radio" id="cal1" />
-              <label for="cal1">
-                Making Inferences: Informational Texts IV
-              </label>
-              <FontAwesomeIcon
-                style={{ cursor: "pointer" }}
-                icon={faExternalLinkAlt}
-                size="lg"
-                color={colors.lightBlue}
-                onClick={handleClick}
-              />
-            </div>
-            <div>
-              <input type="radio" id="cal1" />
-              <label for="cal1">Making Inferences: Informational Texts V</label>
-              <FontAwesomeIcon
-                style={{ cursor: "pointer" }}
-                icon={faExternalLinkAlt}
-                size="lg"
-                color={colors.lightBlue}
-                onClick={handleClick}
-              />
-            </div>
-          </div>
+          <h2>Suggested Lessons</h2>
+          <p>
+            <input type="radio" id="cal1" />
+            <label for="cal1">Making Inferences: Informational Texts I</label>
+            <FontAwesomeIcon
+              style={{ cursor: "pointer" }}
+              icon={faExternalLinkAlt}
+              size="lg"
+              color={colors.lightBlue}
+              onClick={handleClick}
+            />
+          </p>
+          <p>
+            <input type="radio" id="cal1" />
+            <label for="cal1">Making Inferences: Informational Texts II</label>
+            <FontAwesomeIcon
+              style={{ cursor: "pointer" }}
+              icon={faExternalLinkAlt}
+              size="lg"
+              color={colors.lightBlue}
+              onClick={handleClick}
+            />
+          </p>
+          <p>
+            <input type="radio" id="cal1" />
+            <label for="cal1">Making Inferences: Informational Texts III</label>
+            <FontAwesomeIcon
+              icon={faExternalLinkAlt}
+              size="lg"
+              color={colors.lightBlue}
+              onClick={handleClick}
+            />
+          </p>
+          <p>
+            <input type="radio" id="cal1" />
+            <label for="cal1">Making Inferences: Informational Texts IV</label>
+            <FontAwesomeIcon
+              style={{ cursor: "pointer" }}
+              icon={faExternalLinkAlt}
+              size="lg"
+              color={colors.lightBlue}
+              onClick={handleClick}
+            />
+          </p>
+          <p>
+            <input type="radio" id="cal1" />
+            <label for="cal1">Making Inferences: Informational Texts V</label>
+            <FontAwesomeIcon
+              style={{ cursor: "pointer" }}
+              icon={faExternalLinkAlt}
+              size="lg"
+              color={colors.lightBlue}
+              onClick={handleClick}
+            />
+          </p>
         </div>
-        <hr className="scheduler-hr" />
-        <div className="date-time">
+        <hr />
+        <div className="calendar">
+          <h2>Calendar</h2>
           <div>
-            <div>
-              <label>Date</label>
-              <input type="date"></input>
+            <div className="date-time">
+              <p>
+                <label>Date</label>
+                <input type="date"></input>
+              </p>
+              <p>
+                <label>Time</label>
+                <input type="time"></input>
+              </p>
             </div>
-            <div>
-              <label>Time</label>
-              <input type="time"></input>
-            </div>
-          </div>
-          <div className="calendar">
-            <label>Calendar</label>
-            <div>
-              <input type="radio" id="cal1" />
-              <label for="cal1">Google Calendar </label>
-            </div>
-            <div>
-              <input type="radio" id="cal2" />
-              <label for="cal1">iCal</label>
+            <div className="calendar-type">
+              <h3>Calendar</h3>
+              <p>
+                <input type="radio" id="cal1" />
+                <label for="cal1">Google Calendar </label>
+              </p>
+              <p>
+                <input type="radio" id="cal2" />
+                <label for="cal1">iCal</label>
+              </p>
+              <p>
+                <button type="submit">Schedule</button>
+              </p>
             </div>
           </div>
         </div>
-        <button type="submit">Schedule</button>
       </form>
     </section>
   );

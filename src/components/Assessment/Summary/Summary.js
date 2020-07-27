@@ -40,7 +40,7 @@ const Summary = (props) => {
   return (
     <section className="summary">
       <header>
-        <h2>{viewScheduler ? "Schedule New Lesson" : "Summary"}</h2>
+        <h2>{viewScheduler ? "New Lesson" : "Summary"}</h2>
       </header>
       <div className="performance-overview">
         {!viewScheduler && <HorizontalBar students={students} />}
