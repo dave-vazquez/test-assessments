@@ -1,4 +1,4 @@
-import "./styles/lesson-scheduler.scss";
+import "./styles/scheduler.scss";
 
 import React from "react";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";

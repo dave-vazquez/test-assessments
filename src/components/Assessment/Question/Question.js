@@ -1,4 +1,4 @@
-import "./styles/analysis.scss";
+import "./styles/question.scss";
 
 import _ from "lodash";
 import React from "react";
